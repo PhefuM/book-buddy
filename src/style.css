@@ -22,6 +22,8 @@ header {
   width: 300px;
   padding: 0.5rem;
   margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 #search-button {
@@ -29,7 +31,9 @@ header {
   background-color: #007BFF;
   color: white;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 #search-button:hover {
@@ -50,6 +54,13 @@ header {
   margin: 0.5rem;
   width: 300px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .book-card h3 {
@@ -66,7 +77,9 @@ header {
   background-color: #28a745;
   color: white;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .book-card button:hover {
@@ -77,4 +90,22 @@ header {
   margin: 2rem auto;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .search-container, .results-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #search-bar, #search-button, .book-card {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  #viewerCanvas {
+    width: 100%;
+    max-width: 90%;
+  }
 }
