@@ -1,4 +1,5 @@
-const API_URL = 'https://www.googleapis.com/books/v1/volumes?q='; // Base API endpoint
+const API_URL = `https://www.googleapis.com/books/v1/volumes?q=search+terms&key=AIzaSyDbde2mN1C-qESuiYnIPF3H0jSsl4ZA6Oo`
+
 
 async function fetchBooks(query) {
   try {
